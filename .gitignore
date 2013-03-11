@@ -1,0 +1,6 @@
+# python extra stuff
+*.py[cod]
+__pycache__
+
+# virtualenv stuff
+venv

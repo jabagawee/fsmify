@@ -6,6 +6,7 @@ function assert(value, desc) {
 }
 
 function reset_fsm() {
+    $("#txt").val("");
     $("#fsm").attr("src", "");
 }
 

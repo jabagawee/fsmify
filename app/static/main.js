@@ -10,6 +10,10 @@ function reset_fsm() {
     $("#fsm").attr("src", "");
 }
 
+function fill_example() {
+    $("#txt").val("Example Player\nTit for Tat\n2\nC, 0, 1\nD, 0, 1")
+}
+
 function regex_validate(states) {
     var pattern = /[CD], \d+, \d+/
     for (var i = 0; i < states.length; i++) {

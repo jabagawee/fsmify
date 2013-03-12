@@ -63,7 +63,7 @@ function process_fsm() {
     var states = lines.slice(3);
 
     if (!assert(regex_validate(states), "One of your states is not valid.")) {
-        reset_fsm();
+        $("#fsm").attr("src", "");
         return;
     }
 

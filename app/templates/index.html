@@ -1,0 +1,41 @@
+<head>
+    <title>FSMifier</title>
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="page-header">
+                <h1>Turn your TXT files into FSMs!</h1>
+            </div>
+            <center>
+                <p>Insert your TXT files in this section.</p>
+                <textarea id="txt"></textarea>
+                <br />
+                <button onclick="process_fsm();" type="button">FSMify!</button>
+                <button onclick="reset_fsm();" type="button">Reset</button>
+                <hr />
+                <p>Receive your visual representation here!</p>
+                <img id="fsm" />
+            </center>
+        </div>
+        <div id="push"></div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p class="muted credit">
+                Example taken from <a
+                    href="http://twitter.github.com/bootstrap/examples/sticky-footer.html">Twitter</a>.
+            </p>
+        </div>
+    </div>
+
+    <script language="javascript" type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="/static/main.js"></script>
+</body>

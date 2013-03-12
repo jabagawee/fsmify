@@ -35,7 +35,7 @@ String.prototype.format = function() {
 function graphify(states) {
     var cht = "gv";
     var chl_a = ["digraph{rankdir=LR;",];
-    var chl_b = [];
+    var chl_b = ["node [shape=point] start; start -> n0;"];
     for (var i = 0; i < states.length; i++) {
         var state = states[i].split(", ");
         chl_a.push("node [shape=circle, label=\"{1}: {0}\", fontsize=14] n{1};".format(state[0], i));

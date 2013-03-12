@@ -1,7 +1,8 @@
 FSMify
 ======
 
-Currently running at http://fsmify.herokuapp.com/
+Currently running at http://fsmify.herokuapp.com/ and
+http://journal.jabagawee.com/fsmify
 
 FSMify is a quick and dirty program that originally was going to be a
 RESTful [Flask](http://flask.pocoo.org/) site used to generate graphs

@@ -43,10 +43,8 @@ function graphify(states) {
         chl_b.push("n{0} -> n{1} [label=\"D\"];".format(i, state[2]));
     }
     chl_b.push("}");
-    var chl = chl_a.concat(chl_b);
-    var chl = encodeURI(chl.join(''))
 
-    return "https://chart.googleapis.com/chart?cht={0}&chl={1}".format(cht, chl);
+    return chl_a.concat(chl_b).join('');
 }
 
 function process_fsm() {
@@ -67,5 +65,14 @@ function process_fsm() {
         return;
     }
 
-    $("#fsm").attr("src", graphify(states));
+    var chl = graphify(states);
+    if (chl.length < 1900) {
+        // small enough for GET request
+        var graph_url = "https://chart.googleapis.com/chart?cht=gv&chl=" + encodeURI(chl);
+        $("#fsm").attr("src", graph_url);
+    } else {
+        // too big for GET request - we need to make a POST request
+        $("#chl").val(chl);
+        $('#post_form').submit();
+    }
 }

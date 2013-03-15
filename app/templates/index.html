@@ -21,8 +21,12 @@
                 <p>Receive your visual representation here!</p>
                 <img id="fsm" />
             </center>
+            <form action='https://chart.googleapis.com/chart' method='POST' id='post_form' style="display: none;">
+              <input type='hidden' name='cht' value='gv'/>
+              <input type='hidden' name='chl' id='chl' value=''/>
+              <input type='submit'/>
+            </form>
         </div>
-        <div id="push"></div>
     </div>
     <div id="footer">
         <div class="container">
